@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 h1 {
   font-size: 40px;
   color: white;
@@ -57,7 +62,7 @@ h3 {
 .container {
   width: 80%;
   background-color: #393939;
-  height: 200%;
+  /* height: 200%; */
   margin-right: auto;
   margin-left: auto;
 }
