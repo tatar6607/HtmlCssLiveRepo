@@ -7,7 +7,7 @@ h1 {
   font-size: 40px;
   color: white;
   font-family: "Courier New", "monospace";
-  padding-left: 40px;
+  padding-left: 7%;
   padding-top: 20px;
 }
 
@@ -15,7 +15,7 @@ h2 {
   font-size: 25px;
   color: white;
   font-family: "Courier New", "monospace";
-  padding-left: 80px;
+  padding-left: 7%;
   margin-top: -8px;
 }
 
@@ -23,7 +23,7 @@ h3 {
   font-size: 21px;
   color: rgb(233, 227, 227);
   font-family: "Courier New", "monospace";
-  padding-left: 130px;
+  padding-left: 20%;
   margin-top: -8px;
 }
 .subKeyword {
@@ -62,7 +62,6 @@ h3 {
 .container {
   width: 80%;
   background-color: #393939;
-  /* height: 200%; */
   margin-right: auto;
   margin-left: auto;
 }
@@ -70,7 +69,7 @@ h3 {
 #title {
   margin-top: -8px;
   color: rgb(28, 199, 28);
-  padding-left: 80px;
+  padding-left: 7%;
   font-size: 22px;
   font-weight: 500;
 }
@@ -81,7 +80,7 @@ h3 {
 
 #icerik {
   color: white;
-  padding-left: 100px;
+  padding-left: 10%;
   padding-right: 50px;
   font-size: 22px;
   font-weight: 500;
@@ -92,7 +91,7 @@ h3 {
 
 #alt_icerik {
   color: white;
-  padding-left: 160px;
+  padding-left: 20%;
   padding-right: 50px;
   font-size: 20px;
   font-weight: 500;
@@ -102,12 +101,15 @@ h3 {
 }
 
 .padding_alt_icerik {
-  padding-left: 60px;
+  padding-left: 7%;
 }
 
 a {
   color: #e6db74;
   text-decoration: #fd971f;
+}
+a:hover {
+  color: #fd971f;
 }
 
 .lastCurly {
@@ -115,12 +117,12 @@ a {
 }
 
 .import {
-  padding-left: 10px;
+  padding-left: 3%;
   padding-top: 10px;
 }
 
 .avatar {
-  vertical-align: middle;
+  /* vertical-align: middle; */
   width: 150px;
   height: 150px;
   border-radius: 50%;
