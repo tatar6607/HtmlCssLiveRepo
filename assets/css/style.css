@@ -57,7 +57,7 @@ h3 {
 .container {
   width: 80%;
   background-color: #393939;
-  height: 270%;
+  height: 200%;
   margin-right: 200px;
   margin-left: 200px;
 }
@@ -116,6 +116,6 @@ a {
   height: 150px;
   border-radius: 50%;
   position: absolute;
-  top: 50;
-  right: 150;
+  top: 5%;
+  right: 15%;
 }
