@@ -58,8 +58,8 @@ h3 {
   width: 80%;
   background-color: #393939;
   height: 200%;
-  margin-right: 200px;
-  margin-left: 200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #title {
