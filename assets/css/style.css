@@ -39,7 +39,7 @@ h3 {
   font-weight: 600;
   margin-top: -8px;
   font-family: "Courier New", "monospace";
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
 .keyword_h2 {
@@ -48,7 +48,7 @@ h3 {
   font-weight: 600;
   margin-top: -8px;
   font-family: "Courier New", "monospace";
-  letter-spacing: -2px;
+  letter-spacing: 0px;
 }
 .values {
   color: #e6db74;
@@ -56,7 +56,7 @@ h3 {
   font-weight: 600;
   margin-top: -8px;
   font-family: "Courier New", "monospace";
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
 .container {
@@ -99,6 +99,10 @@ h3 {
   margin-top: -8px;
   font-family: "Courier New", "monospace";
   letter-spacing: 0px;
+}
+
+.padding_alt_icerik {
+  padding-left: 60px;
 }
 
 a {
