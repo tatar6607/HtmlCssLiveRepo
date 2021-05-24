@@ -10,46 +10,38 @@
   <body>
     <div class="container mt-5 bg-warning p-5">
       <div>
-        <div style="width: 300px" class="bg-white p-2">
+        <div style="width: 300px" class="bg-secondary p-2 rounded-3">
           <div class="col">
-            <p class="h2 bg-dark text-end p-3 text-white">Ekran</p>
+            <p id="screen" class="h2 bg-dark text-end p-3 text-white">0.0</p>
           </div>
           <div class="d-flex flex-row justify-content-between">
-            <button style="width: 65px" class="btn btn-primary">7</button>
-            <button style="width: 65px" class="btn btn-primary">8</button>
-            <button style="width: 65px" class="btn btn-primary">9</button>
-            <button style="width: 65px" class="btn btn-success">+</button>
+            <button id="7" class="btn btn-primary keys_width">7</button>
+            <button id="8" class="btn btn-primary keys_width">8</button>
+            <button id="9" class="btn btn-primary keys_width">9</button>
+            <button id="+" class="btn btn-success keys_width">+</button>
           </div>
           <div class="d-flex flex-row justify-content-between mt-2">
-            <button style="width: 65px" class="btn btn-primary">4</button>
-            <button style="width: 65px" class="btn btn-primary">5</button>
-            <button style="width: 65px" class="btn btn-primary">6</button>
-            <button style="width: 65px" class="btn btn-success">-</button>
+            <button id="4" class="btn btn-primary keys_width">4</button>
+            <button id="5" class="btn btn-primary keys_width">5</button>
+            <button id="6" class="btn btn-primary keys_width">6</button>
+            <button id="-" class="btn btn-success keys_width">-</button>
           </div>
           <div class="d-flex flex-row justify-content-between mt-2">
-            <button style="width: 65px" class="btn btn-primary">1</button>
-            <button style="width: 65px" class="btn btn-primary">2</button>
-            <button style="width: 65px" class="btn btn-primary">3</button>
-            <button style="width: 65px" class="btn btn-success">&times;</button>
+            <button id="1" class="btn btn-primary keys_width">1</button>
+            <button id="2" class="btn btn-primary keys_width">2</button>
+            <button id="3" class="btn btn-primary keys_width">3</button>
+            <button id="x" class="btn btn-success keys_width">&times;</button>
           </div>
           <div class="d-flex flex-row justify-content-between mt-2">
-            <button style="width: 65px" class="btn btn-primary">0</button>
-            <button style="width: 65px" class="btn btn-secondary">.</button>
-            <button style="width: 65px" class="btn btn-danger">AC</button>
-            <button style="width: 65px" class="btn btn-success">
-              &divide;
-            </button>
+            <button id="0" class="btn btn-primary keys_width">0</button>
+            <button id="." class="btn btn-info keys_width">.</button>
+            <button id="ac" class="btn btn-danger keys_width">AC</button>
+            <button id="/" class="btn btn-success keys_width">&divide;</button>
           </div>
 
           <div class="d-grid col-12 mx-auto mt-2">
-            <button class="btn btn-primary" type="button">=</button>
+            <button id="=" class="btn btn-primary" type="button">=</button>
           </div>
-
-          <!-- <div class="col mt-2">
-            <p class="h2 bg-dark text-end p-2 text-white">
-              <button class="btn btn-danger w-auto">AC</button>
-            </p>
-          </div> -->
         </div>
       </div>
     </div>
