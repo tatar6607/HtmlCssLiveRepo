@@ -30,6 +30,8 @@ const checkNum = (selectedNum) => {
 } 
 
 const bgContainer = document.querySelector(".container");
+const bgContainerColor = bgContainer.className;
+console.log(bgContainerColor);
 bgContainer.onmouseover = () => bgContainer.setAttribute("class", "container mt-5 bg-dark p-5");
 bgContainer.onmouseout = () => bgContainer.setAttribute("class", "container mt-5 bg-warning p-5");
 
