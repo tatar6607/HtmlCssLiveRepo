@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+body {
+  background: #2d3436;
+  font-family: "Press Start 2P", cursive;
+}
+
+.box {
+  width: 145px;
+  height: 120px;
+}
+
+.row-tahmin {
+  align-items: center;
+}
+
+.tahmin-kutusu {
+  margin-top: 20%;
+  align-items: center;
+}
+
+.main-border-top {
+  border-top: 8px solid white;
+}
+
+h1 {
+  font-size: 22px;
+}
+@media (min-width: 576px) {
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 34px;
+  }
+}

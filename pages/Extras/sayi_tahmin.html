@@ -1,0 +1,123 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sayi Tahmin Oyunu</title>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/sayi-tahmin.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="header mx-3 my-2">
+        <div class="d-flex flex-row justify-content-between">
+          <button  id="tekraroyna"  class="btn btn-warning p-3 fs-5">Tekrar</button>
+          <p class="text-white">&lt; 1 ile 20 arasinda &gt;</p>
+        </div>
+        <div class="h2 d-flex justify-content-center my-4 text-white">
+          Sayiyi Tahmin Et
+        </div>
+        <div style="height: 80px"></div>
+        <div class="position-relative">
+          <div
+            class="
+              bg-white
+              text-dark text-center
+              display-1
+              box
+              pt-4
+              position-absolute
+              top-50
+              start-50
+              translate-middle
+            "
+          >
+            ?
+          </div>
+        </div>
+      </header>
+      <main
+        class="
+          border-top border-5 border-white
+          px-0
+          mx-0
+          d-flex
+          justify-content-lg-between
+        "
+      >
+        <div class="d-flex w-100 left-side" style="height: 650px">
+          <div class="p-2 w-50 bg-warning">
+            <div class="d-flex flex-row justify-content-between tahmin-kutusu">
+              <div class="d-flex flex-row ms-2 row-tahmin">
+                <div class="mx-5">
+                  <p  id="artir1" class="text-secondary fs-3" style="color: blue">🔺</p>
+                  <p id="azalt1" class="text-primary fs-3">🔻</p>
+                </div>
+                <textarea
+                  id="t_kutusu1"
+                  class="text-center display-6 py-3 border border-5 border-secondary"
+                  maxlength="2"
+                  style="width: 180px; height: 90px; resize: none"
+                  placeholder="0"
+                ></textarea>
+              </div>
+              <div class="mt-3 mx-5">
+                <p class="justify-content-end">🏆 Puan: <span> 10 </span></p>
+                <p>⛳ Yüksek Puan: <span> 20</span></p>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-center mt-5"> 
+              <button class="
+              btn btn-light 
+              p-3 text-dark 
+              rounded-0
+              border border-5 border-secondary
+              fs-4
+              "
+              >Kontrol Et!</button>
+            </div>
+          </div>
+
+          <div class="p-2 w-50 bg-danger">
+  
+            <div class="d-flex flex-row justify-content-between tahmin-kutusu">
+              
+              <div class="mt-3 mx-5">
+                <p>🏆 Puan: <span> 10 </span></p>
+                <p>⛳ Yüksek Puan: <span> 20</span></p>
+              </div>
+
+              <div class="d-flex flex-row ms-2 row-tahmin me-5">
+                <div class="me-5">
+                  <p id="artir2" class="fs-3">🔺</p>
+                  <p id="azalt2" class="fs-3">🔻</p>
+                </div>
+                <textarea
+                 id="t_kutusu2"
+                  class="text-center display-6 py-3 border border-5 border-secondary"
+                  maxlength="2"
+                  style="width: 180px; height: 90px; resize: none"
+                  placeholder="0"
+                ></textarea>
+              </div>
+          </div>
+
+          <div class="d-flex flex-row justify-content-center mt-5"> 
+            <button class="
+            btn btn-light 
+            p-3 text-dark 
+            rounded-0
+            border border-5 border-secondary
+            fs-4
+             "
+          >Kontrol Et!</button>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <script src="../../assets/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
