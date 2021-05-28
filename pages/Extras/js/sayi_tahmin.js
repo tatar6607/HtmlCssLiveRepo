@@ -56,14 +56,16 @@ function puanAzalt(x) {
 } 
 
 var toplamPuan = (x) => {
+    const totalP1Html = document.getElementById("totalPuan1");
+    const tottalP2Html = document.getElementById("totalPuan2");
     if(x==1) {
         let p1 =  parseInt(puan1.innerHTML,10);
-        let eskiPuan1 = parseInt(document.getElementById("totalPuan1").innerHTML, 10);
-        document.getElementById("totalPuan1").innerHTML = eskiPuan1 + p1;
+        let eskiPuan1 = parseInt(totalP1Html.innerHTML, 10);
+        totalP1Html.innerHTML = eskiPuan1 + p1;
     }else {
         let p2 =  parseInt(puan2.innerHTML,10);
-        let eskiPuan2 = parseInt(document.getElementById("totalPuan2").innerHTML, 10);
-        document.getElementById("totalPuan2").innerHTML = eskiPuan2 + p2;
+        let eskiPuan2 = parseInt(tottalP2Html.innerHTML, 10);
+        tottalP2Html.innerHTML = eskiPuan2 + p2;
     }
 } 
 
