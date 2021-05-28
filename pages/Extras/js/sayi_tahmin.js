@@ -45,13 +45,23 @@ function puanAzalt(x) {
   
 } 
 
+var toplamPuan = (x) => {
+    if(x==1) {
+        let puan =  puan1.innerHTML;
+    parseInt(document.getElementById("totalPuan1").innerHTML) += Number(puan1.innerHTML);  
+    }else {
+        document.getElementById("totalPuan2").innerHTML +=puan2.innerHTML; 
+    }
+} 
+
 var tekrarButonu  = document.querySelector("#tekraroyna");
 tekrarButonu.addEventListener("click",() => {
-    getNewRandom();
-    kontrolButon1.disabled = false
-    kontrolButon2.disabled = false
-    puan1.innerHTML = 10;
-    puan2.innerHTML = 10;
+    // getNewRandom();
+    // kontrolButon1.disabled = false
+    // kontrolButon2.disabled = false
+    // puan1.innerHTML = 10;
+    // puan2.innerHTML = 10;
+    location.reload()
 })
 
 
@@ -73,6 +83,29 @@ azaltButonu1.addEventListener("click",() => {
     :tahmin1.disabled ;    
 } ) 
 
+var yonGoster = (x) => {
+    switch (x) {
+        case artirButonu1:
+            azaltButonu1.setAttribute("class", "fs-3");
+            artirButonu1.setAttribute("class", "fs-3 border-bottom border-5 border-dark");
+            break;
+        case azaltButonu1:
+            artirButonu1.setAttribute("class", "fs-3");
+            azaltButonu1.setAttribute("class", "fs-3  p-0 border-top border-5 border-dark");
+                break; 
+        case artirButonu2:
+            azaltButonu2.setAttribute("class", "fs-3");
+            artirButonu2.setAttribute("class", "fs-3 border-bottom border-5 border-dark");
+            break;
+        case azaltButonu2:
+            artirButonu2.setAttribute("class", "fs-3");
+            azaltButonu2.setAttribute("class", "fs-3  p-0 border-top border-5 border-dark");
+                break;               
+        default:
+            break;
+
+    }
+} 
 
 // tahmin1.onchange = () => {
 //     t = document.getElementById("tahmin1").value;
@@ -92,30 +125,33 @@ kontrolButon1.addEventListener("click", () => {
         getNewRandom();
         changeBG(1);
         kazanma(1);
+        toplamPuan(1);
 
     }else {
         if( birinciOyuncuTahmin > random) {
                 console.log("azalt");
                 puanAzalt(1);
+                yonGoster(azaltButonu1);
         }else {
                 console.log("artir");
-                console.log(puan1.innerHTML);
                 puanAzalt(1);
+                yonGoster(artirButonu1);
+                
         }
     }
 })
 
 // Ikinci oyuncu islemleri
 
-var artirButonu1  = document.querySelector("#artir2");
-var azaltButonu1  = document.querySelector("#azalt2");
-artirButonu1.addEventListener("click",() => {
+var artirButonu2  = document.querySelector("#artir2");
+var azaltButonu2  = document.querySelector("#azalt2");
+artirButonu2.addEventListener("click",() => {
     tahmin2.value <20
     ? tahmin2.innerHTML = ++ tahmin2.value  
     :tahmin2.innerHTML = 20 ; 
 } ) 
 
-azaltButonu1.addEventListener("click",() => {
+azaltButonu2.addEventListener("click",() => {
     tahmin2.value > 0 
     ? tahmin2.innerHTML = --tahmin2.value  
     :tahmin2.innerHTML = 0 ;    
@@ -129,13 +165,16 @@ kontrolButon2.addEventListener("click", () => {
         getNewRandom();
         changeBG(2);
         kazanma(2);
+        toplamPuan(2);
     }else {
         if( ikinciOyuncuTahmin > random) {
                 console.log("azalt");
                 puanAzalt(2)
+                yonGoster(azaltButonu2)
         }else {
                 console.log("artir");
                 puanAzalt(2);
+                yonGoster(artirButonu2)
         }
     }
 })
