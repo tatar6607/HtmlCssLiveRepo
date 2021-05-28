@@ -4,15 +4,24 @@
 // } 
 
 var random = Math.floor((Math.random() * 20) + 1);
-
 var  getNewRandom = () => random = Math.floor((Math.random() * 20) + 1);
+
+var resetAll = () => location.reload();
+var resetBg =  (x) => {
+    if(x==1) {
+       document.querySelector("#bg1").setAttribute("class" , "p-2 w-50 bg-warning") 
+    }else {
+        document.querySelector("#bg2").setAttribute("class" , "p-2 w-50 bg-danger");
+    }
+    
+}
+
 var  changeBG = (x) => {
     x == 1 
     ? document.querySelector("#bg1").setAttribute("class" , "p-2 w-50 bg-success")
     : document.querySelector("#bg2").setAttribute("class" , "p-2 w-50 bg-success");
 } 
 
-var p1, p2 = 10;
 var totalKazanma1, totalKazanma2 = 0;
 
 var tahmin1 =  document.getElementById("tahmin1");
@@ -29,6 +38,7 @@ var kazanma = (x) => {
         total1.innerHTML = ++ total1.innerHTML;
     }else {
         total2.innerHTML = ++ total2.innerHTML;
+
     }
 } 
 
@@ -47,10 +57,13 @@ function puanAzalt(x) {
 
 var toplamPuan = (x) => {
     if(x==1) {
-        let puan =  puan1.innerHTML;
-    parseInt(document.getElementById("totalPuan1").innerHTML) += Number(puan1.innerHTML);  
+        let p1 =  parseInt(puan1.innerHTML,10);
+        let eskiPuan1 = parseInt(document.getElementById("totalPuan1").innerHTML, 10);
+        document.getElementById("totalPuan1").innerHTML = eskiPuan1 + p1;
     }else {
-        document.getElementById("totalPuan2").innerHTML +=puan2.innerHTML; 
+        let p2 =  parseInt(puan2.innerHTML,10);
+        let eskiPuan2 = parseInt(document.getElementById("totalPuan2").innerHTML, 10);
+        document.getElementById("totalPuan2").innerHTML = eskiPuan2 + p2;
     }
 } 
 
@@ -61,8 +74,10 @@ tekrarButonu.addEventListener("click",() => {
     // kontrolButon2.disabled = false
     // puan1.innerHTML = 10;
     // puan2.innerHTML = 10;
-    location.reload()
+    // location.reload()
+    resetAll();
 })
+
 
 
 
@@ -126,16 +141,17 @@ kontrolButon1.addEventListener("click", () => {
         changeBG(1);
         kazanma(1);
         toplamPuan(1);
-
     }else {
         if( birinciOyuncuTahmin > random) {
                 console.log("azalt");
                 puanAzalt(1);
                 yonGoster(azaltButonu1);
+                resetBg(1);
         }else {
                 console.log("artir");
                 puanAzalt(1);
                 yonGoster(artirButonu1);
+                resetBg(1);
                 
         }
     }
@@ -171,10 +187,12 @@ kontrolButon2.addEventListener("click", () => {
                 console.log("azalt");
                 puanAzalt(2)
                 yonGoster(azaltButonu2)
+                resetBg(2);
         }else {
                 console.log("artir");
                 puanAzalt(2);
                 yonGoster(artirButonu2)
+                resetBg(2);
         }
     }
 })
