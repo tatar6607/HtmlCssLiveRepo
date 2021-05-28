@@ -49,12 +49,12 @@
           <div class="p-2 w-50 bg-warning">
             <div class="d-flex flex-row justify-content-between tahmin-kutusu">
               <div class="d-flex flex-row ms-2 row-tahmin">
-                <div class="mx-5">
+                <div class="mx-3">
                   <p  id="artir1" class="text-secondary fs-3" style="color: blue">🔺</p>
                   <p id="azalt1" class="text-primary fs-3">🔻</p>
                 </div>
                 <textarea
-                  id="t_kutusu1"
+                  id="tahmin1"
                   class="text-center display-6 py-3 border border-5 border-secondary"
                   maxlength="2"
                   style="width: 180px; height: 90px; resize: none"
@@ -63,12 +63,14 @@
               </div>
               <div class="mt-3 mx-5">
                 <p class="justify-content-end">🏆 Puan: <span> 10 </span></p>
-                <p>⛳ Yüksek Puan: <span> 20</span></p>
+                <p>⛳ Toplam Puan: <span> 20</span></p>
               </div>
             </div>
 
             <div class="d-flex flex-row justify-content-center mt-5"> 
-              <button class="
+              <button 
+              id="kontrol1"
+              class="
               btn btn-light 
               p-3 text-dark 
               rounded-0
@@ -83,28 +85,30 @@
   
             <div class="d-flex flex-row justify-content-between tahmin-kutusu">
               
-              <div class="mt-3 mx-5">
+              <div class="mt-3 mx-3">
                 <p>🏆 Puan: <span> 10 </span></p>
-                <p>⛳ Yüksek Puan: <span> 20</span></p>
+                <p>⛳ Toplam Puan: <span> 20</span></p>
               </div>
 
-              <div class="d-flex flex-row ms-2 row-tahmin me-5">
-                <div class="me-5">
+              <div class="d-flex flex-row ms-2 row-tahmin me-3">
+                <div class="me-4">
                   <p id="artir2" class="fs-3">🔺</p>
                   <p id="azalt2" class="fs-3">🔻</p>
                 </div>
                 <textarea
-                 id="t_kutusu2"
-                  class="text-center display-6 py-3 border border-5 border-secondary"
-                  maxlength="2"
-                  style="width: 180px; height: 90px; resize: none"
-                  placeholder="0"
+                id="tahmin2"
+                 class="text-center display-6 py-3 border border-5 border-secondary"
+                 maxlength="2"
+                 style="width: 180px; height: 90px; resize: none"
+                 placeholder="0"
                 ></textarea>
               </div>
           </div>
 
           <div class="d-flex flex-row justify-content-center mt-5"> 
-            <button class="
+            <button 
+            id="kontrol2"
+            class="
             btn btn-light 
             p-3 text-dark 
             rounded-0
@@ -119,5 +123,6 @@
     </div>
 
     <script src="../../assets/js/bootstrap.bundle.js"></script>
+    <script src="js/sayi_tahmin.js"></script>
   </body>
 </html>
