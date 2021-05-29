@@ -16,10 +16,12 @@ offButton.addEventListener('click', () => {
 tekButton.addEventListener("click", () => {
   if(isClosed) {
     resim.src ="./img/lamba_on.gif";
-    isClosed= !isClosed; 
+    isClosed= !isClosed;
+    tekButton.innerHTML = "KAPAT"
   }else {
     resim.src = "./img/lamba_off.gif";
-    isClosed= !isClosed; 
+    isClosed= !isClosed;
+    tekButton.innerHTML = "AC" 
   }
 })
 
@@ -32,7 +34,30 @@ resim.addEventListener('mouseout', () => {
 })
 
 
+// Input => yazi buyutme
 
+const adiniz = document.getElementById("adiniz");
+const cbox = document.querySelector("#cbox");
+
+
+adiniz.addEventListener("keyup",() => {
+  cbox.checked 
+  ? adiniz.value = adiniz.value.toUpperCase() 
+  : adiniz.value = adiniz.value.toLowerCase();
+});
+
+// Yeni eleman ekleme
+const h1 = document.createElement("h1");
+const text = document.createTextNode("Programlama Dilleri");
+h1.appendChild(text);
+
+  // document.body.appendChild(h1); // istenilirse direk sayfanin sonuna eklenbilir
+const sonDiv = document.querySelector(".input-div");
+sonDiv.after(h1); // son divden sonra ekleme yapar
+
+
+
+h1.setAttribute("class", "mt-5 text-center text-danger fs-3");
 
 // Ac butonuna her tiklandiginda lamba_on resmini goster.
 // document.querySelector(".on").onclick = function () {
