@@ -55,9 +55,54 @@ h1.appendChild(text);
 const sonDiv = document.querySelector(".input-div");
 sonDiv.after(h1); // son divden sonra ekleme yapar
 
+h1.setAttribute("class", "mt-5 text-danger mb-2 text-start");
+
+const ul = document.getElementsByTagName("ul")[0];
+const inputDil = document.querySelector("#dil");
+const ekle = document.querySelector(".ekle");
+const sil = document.querySelector(".sil");
 
 
-h1.setAttribute("class", "mt-5 text-center text-danger fs-3");
+ekle.addEventListener("click",() => {
+  const dil = inputDil.value;
+  dilEkle(dil)
+});
+
+let dilEkle = (dil) => {
+  const li = document.createElement("li") // li elamni ulsturduk
+  const liText = document.createTextNode(dil); // li nin  text icerigini olusturduk 
+  li.appendChild(liText);
+  ul.appendChild(li);
+} 
+
+// listeden eleman silme 
+sil.addEventListener("click", () => {
+  ul.removeChild(ul.lastElementChild);
+ // eleman bittigi ahlde silmeye calismasini onlemek icin 
+      // ul.children.length > 0 ? ul.removeChild(ul.lastElementChild) : null ; // 1. yontem
+      // ul.lastElementChild != null ? ul.removeChild(ul.lastElementChild) : null; // 2.yontem
+});
+
+
+
+
+ // li ve input ekleme
+
+//  const ul = document.createElement("ul");
+//  ul.setAttribute("class", "ms-5") 
+
+//  const li = document.createElement("li");
+//  li.setAttribute("class", "text-start") 
+
+//  const li1Text = document.createTextNode("Javascript"); 
+//  li.appendChild(li1Text);
+//  ul.appendChild(li);
+//  h1.after(ul); 
+
+ 
+
+
+
 
 // Ac butonuna her tiklandiginda lamba_on resmini goster.
 // document.querySelector(".on").onclick = function () {
