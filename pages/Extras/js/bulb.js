@@ -55,7 +55,7 @@ h1.appendChild(text);
 const sonDiv = document.querySelector(".input-div");
 sonDiv.after(h1); // son divden sonra ekleme yapar
 
-h1.setAttribute("class", "mt-5 text-danger mb-2 text-start");
+h1.setAttribute("class", "mt-5 text-danger mb-2 text-center");
 
 const ul = document.getElementsByTagName("ul")[0];
 const inputDil = document.querySelector("#dil");
