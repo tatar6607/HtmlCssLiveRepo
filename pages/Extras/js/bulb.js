@@ -65,7 +65,8 @@ const sil = document.querySelector(".sil");
 
 ekle.addEventListener("click",() => {
   const dil = inputDil.value;
-  dilEkle(dil)
+  // dilEkle(dil)
+  dil != "" ? dilEkle(dil) :  alert("Lutfen eklenecek dili giriniz.");
 });
 
 let dilEkle = (dil) => {
