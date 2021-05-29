@@ -79,7 +79,7 @@ let dilEkle = (dil) => {
 // listeden eleman silme 
 sil.addEventListener("click", () => {
   ul.removeChild(ul.lastElementChild);
- // eleman bittigi ahlde silmeye calismasini onlemek icin 
+ // eleman bittigi halde silmeye calismasini onlemek icin 
       // ul.children.length > 0 ? ul.removeChild(ul.lastElementChild) : null ; // 1. yontem
       // ul.lastElementChild != null ? ul.removeChild(ul.lastElementChild) : null; // 2.yontem
 });
