@@ -3,6 +3,9 @@ let firstValue;
 let operator;
 let secondValue; 
 
+const operators = ["+", "-", "&times;", "&divide;"];
+let calcList = new LinkedList();
+
 const buttonsValues = document.querySelectorAll("button");
 buttonsValues.forEach(element => {
     element.addEventListener('click' , (e) => {
@@ -18,21 +21,58 @@ const changeScreen = (selectedNum) => {
 
 const checkNum = (selectedNum) => {
 
-    if(selectedNum!=0 && (screen.innerHTML == "0" || screen.innerHTML == "0.0")) {
-        screen.innerHTML = selectedNum; 
-    }else {
-        screen.innerHTML += selectedNum;
+    // if(selectedNum!=0 && (screen.innerHTML == "0" || screen.innerHTML == "0.0")) {
+    //     screen.innerHTML = selectedNum; 
+    // }else {
+    //     screen.innerHTML += selectedNum;
+    // }
+
+    if(selectedNum === 0){
+        if(screen.innerHTML.includes(".")){
+            screen.innerHTML += selectedNum
+        }
+    }else if(selectedNum === "AC") {
+        screen.innerHTML = "0";
+        // console.log(screen.innerHTML);
+    } else if(selectedNum === "."){
+        if(screen.innerHTML.length === 0){
+            screen.innerHTML = "0."
+        }else{
+            screen.innerHTML += "."
+        }
+    }else if(operators.includes(selectedNum)){
+        const node1 = new ListNode(screen.innerHTML, false)
+        const node2 = new ListNode(selectedNum, true)
+        node1.next = node2
+        if(calcList.head === null){
+            calcList.head = node1
+        }
+    }else if(selectedNum === "="){
+        // traverse the linkedlist 
     }
 
     // screen.innerHTML == "0" && selectedNum == "x" || screen.innerHTML == "0" && selectedNum == "&divide;"
     // ? screen.innerHTML = "0" 
     // : screen.innerHTML += selectedNum;    
 
-    if(selectedNum=="AC") {
-        screen.innerHTML = "0";
-        // console.log(screen.innerHTML);
-    }  
-} 
+     
+}
+
+class ListNode {
+    constructor(value = '', operator = false) {
+        this.data = {
+            "operator": operators,
+            "value": value
+        }
+        this.next = null                
+    }
+}
+
+class LinkedList {
+    constructor(head = null) {
+        this.head = head
+    }
+}
 
 
 
