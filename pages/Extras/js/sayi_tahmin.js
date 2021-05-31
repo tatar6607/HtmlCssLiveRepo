@@ -46,11 +46,18 @@ function puanAzalt(x) {
     if(x==1) {
         let p = puan1.innerHTML;  
         puan1.innerHTML = --p
-        p == 0 ? kontrolButon1.disabled = true : null;
+        if(p == 0 ) {
+            kontrolButon1.disabled = true;
+            kontrolButon1.innerHTML = "Uzgunum oyun hakkiniz bitti!"
+        }
     } else {
         let p = puan2.innerHTML;  
         puan2.innerHTML = --p
-        p == 0 ? kontrolButon2.disabled = true : null;
+        if(p == 0 ) {
+            kontrolButon2.disabled = true;
+            kontrolButon2.innerHTML = "Uzgunum oyun hakkiniz bitti!"
+        }
+        // p == 0 ? kontrolButon2.disabled = true : null;
     }
   
 } 
