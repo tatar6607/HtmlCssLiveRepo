@@ -24,7 +24,7 @@ let yorumlar = [
       "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     adSoyad: "Ali Hamarta",
     meslek: "Muhendis",
-    aciklama: "Ese dosta tavsiye ediyorum O derece.",
+    aciklama: "Ese dosta tavsiye ediyorum o derece...",
   },
 
   {
@@ -55,7 +55,7 @@ let yorumlar = [
     photo: "./assets/images/sample.png",
     adSoyad: "Eric Jhonson",
     meslek: "Gezgin",
-    aciklama: "Fiyat/Performans urun beyler kacmaz Verdigin paraya degiyor :)",
+    aciklama: "Fiyat/Performans urunu beyler verdiginiz paraya degiyor :)",
   },
 ];
 
