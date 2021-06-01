@@ -62,11 +62,7 @@ let yorumlar = [
 let seciliYorum = 0;
 // console.log("toplam yorum", seciliYorum);
 
-const loadComment = (x) => {
-  if (x == "random") {
-    let randomIndex = Math.floor(Math.random() * yorumlar.length);
-    seciliYorum = randomIndex;
-  }
+const loadComment = () => {
   let yorum = yorumlar[seciliYorum];
   let { photo, adSoyad, meslek, aciklama } = yorum;
   kisiResim.src = photo;
@@ -75,22 +71,24 @@ const loadComment = (x) => {
   aciklamap.innerHTML = aciklama;
 };
 
-loadComment("normal");
+loadComment();
 
 sol.onclick = () => {
-  console.log(seciliYorum);
+  // console.log(seciliYorum);
   seciliYorum <= 0 ? (seciliYorum = yorumlar.length) : null;
   --seciliYorum;
-  loadComment("normal");
+  loadComment();
 };
 
 sag.onclick = () => {
-  console.log(seciliYorum);
+  // console.log(seciliYorum);
   seciliYorum >= yorumlar.length - 1 ? (seciliYorum = -1) : null;
   ++seciliYorum;
-  loadComment("normal");
+  loadComment();
 };
 
 sasirt.onclick = () => {
-  loadComment("random");
+  let randomIndex = Math.floor(Math.random() * yorumlar.length);
+  seciliYorum = randomIndex;
+  loadComment();
 };
