@@ -1,8 +1,8 @@
 // icerik locators
 const kisiResim = document.querySelector("#kişi-resim");
-const adSoyad = document.querySelector("#yazar");
-const meslek = document.querySelector("#meslek");
-const aciklama = document.querySelector("#açıklama");
+const yazar = document.querySelector("#yazar");
+const meslekp = document.querySelector("#meslek");
+const aciklamap = document.querySelector("#açıklama");
 
 // button locators
 const sol = document.querySelector(".geri-btn");
@@ -59,33 +59,34 @@ let yorumlar = [
   },
 ];
 
-let seciliYorum = yorumlar.length;
-console.log("toplam yorum", seciliYorum);
+let seciliYorum = yorumlar.length - 1;
+// console.log("toplam yorum", seciliYorum);
 
 const loadComment = (x, i = 0) => {
   if (x == "random") {
     let randomIndex = Math.floor(Math.random() * yorumlar.length);
     i = randomIndex;
-    seciliYorum = i;
   }
-
+  seciliYorum = i;
   let yorum = yorumlar[i];
-  kisiResim.src = yorum.photo;
-  adSoyad.innerHTML = yorum.adSoyad;
-  meslek.innerHTML = yorum.meslek;
-  aciklama.innerHTML = yorum.aciklama;
+  let { photo, adSoyad, meslek, aciklama } = yorum;
+  // console.log(photo, adSoyad, meslek, aciklama);
+  kisiResim.src = photo;
+  yazar.innerHTML = adSoyad;
+  meslekp.innerHTML = meslek;
+  aciklamap.innerHTML = aciklama;
 };
 
 loadComment("normal");
 
 sol.onclick = () => {
-  // console.log(seciliYorum);
+  console.log(seciliYorum);
   seciliYorum <= 0 ? (seciliYorum = yorumlar.length) : null;
   loadComment("normal", --seciliYorum);
 };
 
 sag.onclick = () => {
-  // console.log(seciliYorum);
+  console.log(seciliYorum);
   seciliYorum >= yorumlar.length - 1 ? (seciliYorum = -1) : null;
   loadComment("normal", ++seciliYorum);
 };
