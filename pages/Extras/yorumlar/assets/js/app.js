@@ -41,12 +41,9 @@ sag.onclick = () => {
 
 sasirt.onclick = () => {
   let rndm = Math.floor(Math.random() * yorumlar.length);
-  console.log("secili yorum", seciliYorum);
   while (seciliYorum == rndm) {
     rndm = Math.floor(Math.random() * yorumlar.length);
-    console.log("ic random", rndm);
   }
-  console.log("son random", rndm);
   seciliYorum = rndm;
   loadComment();
 };
