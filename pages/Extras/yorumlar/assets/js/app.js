@@ -88,7 +88,6 @@ sag.onclick = () => {
 };
 
 sasirt.onclick = () => {
-  let randomIndex = Math.floor(Math.random() * yorumlar.length);
-  seciliYorum = randomIndex;
+  seciliYorum = Math.floor(Math.random() * yorumlar.length);
   loadComment();
 };
